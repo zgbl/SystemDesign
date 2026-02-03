@@ -1,28 +1,39 @@
 # System Design Interview Preparation
 
-Welcome to your personal System Design knowledge base. This repository is structured to help you systematicly prepare for high-level technical interviews.
+Welcome to your personal System Design knowledge base. This repository is structured to help you systematically prepare for high-level technical interviews.
 
 ## 📂 Repository Structure
 
-- [00-Checklists-and-Cheat-Sheets](./00-Checklists-and-Cheat-Sheets): Quick reference for numbers, estimation formulas, and checklists.
-- [01-Fundamentals](./01-Fundamentals): Core concepts (Scaling, CAP, Consistency, etc.).
-- [02-Components](./02-Components): Deep dives into building blocks (LB, DB, Cache, MQ).
-- [03-Patterns](./03-Patterns): Architecture patterns (Microservices, Event-driven).
-- [04-Case-Studies](./04-Case-Studies): Practical interview problems (Twitter, YouTube, etc.).
-- [05-Templates](./05-Templates): Use these to start new notes.
+### 1. [Fundamentals](./01-Fundamentals/fundamentals-overview.md)
+Core concepts: Scalability, CAP Theorem, Consistency Models, and Availability.
+
+### 2. Components
+The building blocks of large-scale systems:
+- [Load Balancing](./02-Components/01-load-balancer.md)
+- [Databases](./02-Components/02-databases.md)
+- [Caching](./02-Components/03-caching.md)
+
+### 3. [Patterns](./03-Patterns/patterns-overview.md)
+Architectural styles: Microservices, Event-driven, and API Gateways.
+
+### 4. Case Studies
+Real-world interview problems:
+- [**Master List**](./04-Case-Studies/summary.md)
+- [**Case Study 01: News Feed**](./04-Case-Studies/01-news-feed.md) (Standard for Meta/TikTok)
+
+### 5. Templates
+Use these to add your own notes:
+- [Case Study Template](./05-Templates/case-study-template.md)
+- [Component Template](./05-Templates/component-template.md)
+
+---
 
 ## 🚀 How to Use This Repo
 
 1. **Start with Fundamentals**: Refresh your understanding of scaling and distributed systems.
 2. **Build your Toolbox**: Study each component in `02-Components`.
-3. **Practice Case Studies**: Use the `case-study-template.md` to solve problems independently before looking up solutions.
-4. **Iterate**: Update your notes as you learn new things from mock interviews or engineering blogs.
-
-## 🛠 Tools Recommended
-
-- **VS Code**: Use `Cmd + Shift + V` to preview Markdown.
-- **Typora / Obsidian**: Best-in-class local Markdown editors for a "Read-friendly" experience.
-- **Mermaid.js**: All diagrams in this repo use Mermaid. You can live-edit them [here](https://mermaid.live/).
+3. **Practice Case Studies**: Use the templates to solve problems independently.
+4. **Learn from Diagrams**: This repository uses **Mermaid.js**. You can preview diagrams in VS Code with `Cmd + Shift + V`.
 
 ---
-*Good luck with your interviews!*
+*Good luck with your interviews at Google, Meta, and TikTok!*
