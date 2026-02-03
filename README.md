@@ -12,6 +12,8 @@ The building blocks of large-scale systems:
 - [Load Balancing](./02-Components/01-load-balancer.md)
 - [Databases](./02-Components/02-databases.md)
 - [Caching](./02-Components/03-caching.md)
+- [API Design](./01-Fundamentals/04-api-design.md)
+- [Security](./01-Fundamentals/05-security.md) <!-- Planned -->
 
 ### 3. [Patterns](./03-Patterns/patterns-overview.md)
 Architectural styles: Microservices, Event-driven, and API Gateways.

@@ -29,11 +29,33 @@ graph TD
 - **Push (Fan-out on write)**: When a user posts, it's pushed to all followers' caches. Fast reads, but slow writes for celebrities ("Celebrity Problem").
 - **Hybrid Approach**: Push for normal users, Pull for celebrities.
 
-## 5. Components
+## 5. API Design
+### `GET /v1/me/feed`
+- **Description**: Pull the latest posts for the current user.
+- **Parameters**:
+  - `limit`: Number of posts to fetch (default 20).
+  - `cursor`: Pointer to the next page of results.
+- **Response**:
+  ```json
+  {
+    "posts": [
+      { "id": "p1", "text": "Hello world", "author": "u1" },
+      { "id": "p2", "text": "System design is fun", "author": "u2" }
+    ],
+    "next_cursor": "c_xyz"
+  }
+  ```
+
+### `POST /v1/posts`
+- **Description**: Create a new post.
+- **Payload**: `{ "text": "Awesome post" }`
+- **Response**: `201 Created`
+
+## 6. Components
 - **Post Service**: Stores text/media metadata.
 - **Media Storage**: S3 for images/videos + CDN.
 - **Feed Cache**: Redis clusters storing `PostIDs` for each user.
 
-## 6. Optimization
+## 7. Optimization
 - **Pagination**: Use cursor-based pagination for smooth scrolling.
 - **Ranking**: Use a separate Ranking Service (ML based) to sort posts.

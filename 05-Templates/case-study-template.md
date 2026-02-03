@@ -31,7 +31,24 @@ graph TD
     API --> Cache[Redis Cache]
 ```
 
-## 4. Component Deep Dive
+## 4. API Design
+### [Endpoint 1: e.g. GET /v1/resource]
+- **Description**: [What it does]
+- **Request Parameters**:
+  - `param1`: [Type, Description]
+- **Response**:
+  ```json
+  {
+    "id": "123",
+    "status": "ok"
+  }
+  ```
+
+### [Endpoint 2: e.g. POST /v1/resource]
+- **Description**: [What it does]
+- **Payload**: [JSON structure]
+
+## 5. Component Deep Dive
 ### [Component A: e.g. Database Schema]
 - Choice of DB: [SQL vs NoSQL]
 - Schema details:
@@ -40,10 +57,10 @@ graph TD
 - Algorithm:
 - Pros/Cons:
 
-## 5. Scaling & Bottlenecks
+## 6. Scaling & Bottlenecks
 - How to handle [X bottleneck]?
 - Monitoring and Metrics.
 
-## 6. Summary / Trade-offs
+## 7. Summary / Trade-offs
 - [Trade-off 1]
 - [Trade-off 2]
