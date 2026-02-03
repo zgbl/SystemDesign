@@ -64,3 +64,9 @@ graph TD
 ## 7. Summary / Trade-offs
 - [Trade-off 1]
 - [Trade-off 2]
+
+---
+
+### Reference Links
+- [API Design Core Concepts](../06-API-Design/api-design-overview.md)
+- [REST vs GraphQL vs gRPC](../06-API-Design/01-rest-api.md)

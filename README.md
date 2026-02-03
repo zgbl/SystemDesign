@@ -12,13 +12,19 @@ The building blocks of large-scale systems:
 - [Load Balancing](./02-Components/01-load-balancer.md)
 - [Databases](./02-Components/02-databases.md)
 - [Caching](./02-Components/03-caching.md)
-- [API Design](./01-Fundamentals/04-api-design.md)
 - [Security](./01-Fundamentals/05-security.md) <!-- Planned -->
 
-### 3. [Patterns](./03-Patterns/patterns-overview.md)
+### 3. [API Design](./06-API-Design/api-design-overview.md)
+Comprehensive guides for networked systems:
+- [REST API Deep Dive](./06-API-Design/01-rest-api.md)
+- [GraphQL Deep Dive](./06-API-Design/02-graphql.md)
+- [gRPC & RPC Deep Dive](./06-API-Design/03-grpc-rpc.md)
+- [Advanced Patterns](./06-API-Design/04-advanced-patterns.md)
+
+### 4. [Patterns](./03-Patterns/patterns-overview.md)
 Architectural styles: Microservices, Event-driven, and API Gateways.
 
-### 4. Case Studies
+### 5. Case Studies
 Real-world interview problems:
 - [**Master List**](./04-Case-Studies/summary.md)
 - [**Case Study 01: News Feed**](./04-Case-Studies/01-news-feed.md) (Standard for Meta/TikTok)
