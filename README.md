@@ -12,6 +12,8 @@ The building blocks of large-scale systems:
 - [Load Balancing](./02-Components/01-load-balancer.md)
 - [Databases](./02-Components/02-databases.md)
 - [Caching](./02-Components/03-caching.md)
+- [Message Queues](./02-Components/04-message-queues.md)
+- [Middleware](./02-Components/05-middleware.md)
 - [Security](./01-Fundamentals/05-security.md) <!-- Planned -->
 
 ### 3. [API Design](./06-API-Design/api-design-overview.md)
@@ -29,7 +31,11 @@ Real-world interview problems:
 - [**Master List**](./04-Case-Studies/summary.md)
 - [**Case Study 01: News Feed**](./04-Case-Studies/01-news-feed.md) (Standard for Meta/TikTok)
 
-### 5. Templates
+### 6. [Advanced Topics](./07-Advanced-Topics/scaling-to-billion-users.md)
+Deep dives into massive scale:
+- [Scaling to a Billion Users](./07-Advanced-Topics/scaling-to-billion-users.md)
+
+### 7. Templates
 Use these to add your own notes:
 - [Case Study Template](./05-Templates/case-study-template.md)
 - [Component Template](./05-Templates/component-template.md)
