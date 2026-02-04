@@ -11,7 +11,7 @@ Core concepts: Scalability, CAP Theorem, Consistency Models, and Availability.
 The building blocks of large-scale systems:
 - [Load Balancing](./02-Components/01-load-balancer.md)
 - [Databases](./02-Components/02-databases.md)
-- [Caching](./02-Components/03-caching.md)
+- [Caching](./02-Components/03-caching.md) ([Redis Deep Dive](./02-Components/06-redis-deep-dive.md))
 - [Message Queues](./02-Components/04-message-queues.md)
 - [Middleware](./02-Components/05-middleware.md)
 - [Security](./01-Fundamentals/05-security.md) <!-- Planned -->
@@ -24,7 +24,10 @@ Comprehensive guides for networked systems:
 - [Advanced Patterns](./06-API-Design/04-advanced-patterns.md)
 
 ### 4. [Patterns](./03-Patterns/patterns-overview.md)
-Architectural styles: Microservices, Event-driven, and API Gateways.
+Architectural styles and stability:
+- [Patterns Overview](./03-Patterns/patterns-overview.md)
+- [Resiliency (Circuit Breaking, Rate Limiting)](./03-Patterns/02-resiliency-patterns.md)
+- Microservices, Event-driven, and API Gateways.
 
 ### 5. Case Studies
 Real-world interview problems:

@@ -7,7 +7,7 @@ Caching is the #1 way to reduce latency and database load.
 - **CDN**: Edge locations for static content (Images, Video).
 - **Load Balancer**: Can cache some static responses.
 - **Application**: In-memory cache (Guava).
-- **Distributed Cache**: Redis, Memcached.
+- **Distributed Cache**: Redis ([Deep Dive](./06-redis-deep-dive.md)), Memcached.
 
 ## Eviction Policies
 When the cache is full, what do we remove?

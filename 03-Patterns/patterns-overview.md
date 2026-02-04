@@ -28,4 +28,9 @@ A single entry point for all clients. Handles:
 - Authentication / Authorization
 - Rate Limiting
 - Request Routing
-- Logging
+## 5. Resiliency Patterns
+Essential for stability in distributed systems:
+- **Circuit Breaker**: Preventing cascading failures.
+- **Degradation**: Sacrificing features for survival.
+- **Timeout & Rate Limiting**: Protecting resources.
+- See the [Resiliency Deep Dive](./02-resiliency-patterns.md) for more.

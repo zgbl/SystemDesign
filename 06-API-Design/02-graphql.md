@@ -9,6 +9,34 @@ GraphQL is a query language for APIs and a runtime for fulfilling those queries 
 - **Mutation**: Request to change data.
 - **Subscription**: Real-time push updates (usually over WebSockets).
 
+### GraphQL Efficiency
+
+#### Single Query for Multiple Resources
+Unlike REST, GraphQL allows fetching a user and their posts in one round-trip.
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant GraphQL Server
+    participant Database
+    Client->>GraphQL Server: POST /graphql (Query: user { name, posts { title } })
+    GraphQL Server->>Database: Fetch User + Posts
+    Database-->>GraphQL Server: Data
+    GraphQL Server-->>Client: { "data": { "user": { "name": "Alice", "posts": [...] } } }
+```
+
+#### Client-Side Field Selection
+The client specifies exactly which fields it needs, eliminating over-fetching.
+
+```mermaid
+graph TD
+    Client -- "Query: { user { name } }" --> GS[GraphQL Server]
+    GS -- "{ 'name': 'Alice' }" --> Client
+    Note over GS: Only 'name' is fetched and returned
+```
+
+---
+
 ## 2. Solving the N+1 Problem
 In REST, you might hit `/posts` then hit `/users/{id}` for each post author (N+1 requests).
 In GraphQL, if not handled correctly, the server-side will hit the DB N+1 times.

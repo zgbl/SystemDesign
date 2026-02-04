@@ -15,6 +15,53 @@ To evaluate how "RESTful" an API is, we use this model:
 - **Hierarchical Relationships**: `/authors/45/books`.
 - **Query Parameters for Filtering/Sorting**: `/users?role=admin&sort=created_at`.
 
+### REST Efficiency Issues
+
+#### Issue 1: Under-fetching (Multiple Round-trips)
+In REST, resources are isolated. To get a user and their posts, you often need two requests.
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    Client->>Server: GET /users/1
+    Server-->>Client: { "id": 1, "name": "Alice" }
+    Client->>Server: GET /users/1/posts
+    Server-->>Client: [ { "id": 101, "title": "Hello" }, ... ]
+```
+
+#### Issue 2: Over-fetching (Excess Data)
+The server defines the response structure. You get all fields even if you only need the "name".
+
+```mermaid
+graph LR
+    Client -- "GET /users/1" --> Server
+    Server -- "{ id, name, email, age, bio, avatar, ... }" --> Client
+    Note over Client: Only needed 'name'
+```
+
+### REST in Microservices Architecture
+In a microservices world, REST is often used for communication between the API Gateway and internal services, or between services themselves.
+
+```mermaid
+graph TD
+    User((User)) --> Gateway[API Gateway]
+    subgraph "Internal Network"
+        Gateway -- "GET /v1/users/123" --> UserSvc[User Service]
+        Gateway -- "GET /v1/orders?user=123" --> OrderSvc[Order Service]
+        UserSvc --> UserDB[(User DB)]
+        OrderSvc --> OrderDB[(Order DB)]
+        OrderSvc -- "GET /v1/products/45" --> ProductSvc[Product Service]
+    end
+```
+
+**Key Points in this Scenario:**
+- **Decoupling**: Each service can be developed and scaled independently.
+- **Contract-Based**: Services agree on JSON/REST contracts.
+- **Chattiness**: If an operation requires data from 5 services, the "chattiness" of REST can lead to performance bottlenecks (latency amplification).
+
+---
+
 ## 3. HTTP Methods & Idempotency
 
 | Method | Idempotent | Safe | Description |
